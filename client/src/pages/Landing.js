@@ -7,7 +7,7 @@ const Landing = () => {
     <Wrapper>
         <div className="containing">
             <nav>
-                <a href="#"><img src={coffeeLogo} class="logo" alt="logo" /></a>
+                <a href="/"><img src={coffeeLogo} class="logo" alt="logo" /></a>
             </nav>
             <div className="container page">
                 <div className="info">
@@ -40,6 +40,7 @@ const Wrapper = styled.main`
     .page {
         display: grid;
         align-items: center;
+        min-height: 32rem;
     }
 
     h2 {
@@ -60,8 +61,8 @@ const Wrapper = styled.main`
     }
 
     .main-img {
-        width: 70%;
         margin: 0 auto;
+        max-width: 65%;
     }
 
     @media (min-width: 850px) {
