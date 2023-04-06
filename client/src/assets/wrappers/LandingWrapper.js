@@ -32,18 +32,35 @@ const Wrapper = styled.main`
 
     .info {
         margin-bottom: 2rem;
+        display: block;
+        height: fit-content;
     }
 
     p {
         text-align: justify;
+        margin-bottom: 2rem;
     }
 
     .main-img {
         margin: 0 auto;
         max-width: 65%;
     }
+    
+    .btn {
+        cursor: pointer;
+        color: var(--mainBlack);
+        background-color: var(--mainColor2);
+        box-shadow: var(--shadow-1);
+        border: transparent;
+        letter-spacing: 1px;
+        padding: 1rem;
+        text-decoration: none;
+        display: block;
+            margin: 0 auto;
+            width: fit-content;
+    }
 
-    @media (min-width: 850px) {
+    @media (min-width: 750px) {
         .containing {
             margin: 1rem 1.2rem 1rem 2.7rem;
     }
@@ -54,6 +71,9 @@ const Wrapper = styled.main`
         }
         .main-img {
             display: block;
+        }
+        .btn {
+            display: inline;
         }
     }
 `

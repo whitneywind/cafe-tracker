@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styled from "styled-components"
+import Wrapper from '../assets/wrappers/RegisterWrapper.js'
 
 const initialUserState = {
     name: '',
@@ -28,8 +28,5 @@ const Register = () => {
     </Wrapper>
   )
 }
-
-const Wrapper = styled.div`
-`
 
 export default Register

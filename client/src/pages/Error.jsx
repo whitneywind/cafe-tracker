@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ErrorImg from "../assets/images/error.svg";
-import Wrapper from "../assets/wrappers/ErrorWrapper.js";
+import Wrapper from "../assets/wrappers/ErrorWrapper";
 import { motion } from 'framer-motion'
 
 export default function ErrorPage() {

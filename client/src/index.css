@@ -30,7 +30,7 @@ body {
   line-height: 1.70;
 }
 
-.btn {
+/* .btn {
   cursor: pointer;
   color: var(--mainBlack);
   background-color: var(--mainColor2);
@@ -38,8 +38,8 @@ body {
   border: transparent;
   letter-spacing: 1px;
   padding: 1rem;
-  margin-top: 0.3rem;
-}
+  text-decoration: none;
+} */
 
 .img {
   width: 100%;
