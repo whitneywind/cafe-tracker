@@ -30,7 +30,7 @@ const Wrapper = styled.main`
         letter-spacing: 1px;
         padding: 1rem;
         margin-top: 3rem;
-        transition: all .2s ease-in-out;
+        transition: all .2s;
     }
     .homeLink {
         text-decoration: none;
