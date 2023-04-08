@@ -20,9 +20,14 @@ const Wrapper = styled.div`
         text-align: center;
         padding: 0.25rem;
         font-size: 1.15rem;
+        font-weight: 600;
     }
     .alert-danger {
-        background-color: red;
+        background-color: #ee6b6b;
+    }
+    .alert-success {
+        background-color: #8ce36c;
     }
 `
+
 export default Alert

@@ -9,13 +9,19 @@ const initialUserState = {
     name: '',
     email: '',
     password: '',
-    isMember: true,
+    isMember: false,
 }
 
 const Register = () => {
     const [userValues, setUserValues] = useState(initialUserState);
 
-    const { isLoading, showAlert, handleShowAlert } = useAppContext();
+    const { 
+        isLoading,
+        showAlert,
+        showDangerAlert,
+        showSuccessAlert,
+        clearAlert, 
+    } = useAppContext();
 
     const toggleIsMember = () => {
         setUserValues({...userValues, isMember: !userValues.isMember});
@@ -27,6 +33,15 @@ const Register = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        const { name, email, password, isMember } = userValues;
+        if ((!name && !isMember) || !email || !password ) {
+            showDangerAlert();
+            clearAlert()
+            toggleIsMember();
+            return;
+        }
+        showSuccessAlert();
+        clearAlert();
         console.log(userValues);
     }
 
@@ -37,7 +52,7 @@ const Register = () => {
             <h1>Login</h1>
             {showAlert && <Alert />}
 
-            {!userValues.isMember && (
+            {userValues.isMember && (
                 <div className="form-row">
                 <label htmlFor="name" className="form-label">name</label>
                 <input type="text" name="name" value={userValues.name} onChange={onChange} className="form-input" />
