@@ -6,7 +6,7 @@ import { useAppContext } from "../context/appContext.js"
 
 
 const initialUserState = {
-    name: '',
+    username: '',
     email: '',
     password: '',
     isMember: false,
@@ -33,8 +33,8 @@ const Register = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        const { name, email, password, isMember } = userValues;
-        if ((!name && !isMember) || !email || !password ) {
+        const { username, email, password, isMember } = userValues;
+        if ((!username && !isMember) || !email || !password ) {
             showDangerAlert();
             clearAlert()
             toggleIsMember();
@@ -54,8 +54,8 @@ const Register = () => {
 
             {userValues.isMember && (
                 <div className="form-row">
-                <label htmlFor="name" className="form-label">name</label>
-                <input type="text" name="name" value={userValues.name} onChange={onChange} className="form-input" />
+                <label htmlFor="username" className="form-label">username</label>
+                <input type="text" name="username" value={userValues.username} onChange={onChange} className="form-input" />
             </div>
             )}
             <div className="form-row">
